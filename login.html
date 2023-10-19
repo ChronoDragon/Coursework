@@ -1,5 +1,7 @@
 ﻿<!--Problems: Login contaier doesnt go in the middle of the screen-->
 <!DOCTYPE html>
+<html>
+  
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
@@ -7,6 +9,29 @@
     <link rel="stylesheet" type="text/css" href="login.css">
     <script src="login.js"></script>
     <script src="https://kit.fontawesome.com/40b00c5319.js" crossorigin="anonymous"></script>
+    <script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    ,
+    authDomain: "coursework-ba6b7.firebaseapp.com",
+    projectId: "coursework-ba6b7",
+    storageBucket: "coursework-ba6b7.appspot.com",
+    messagingSenderId: "465527666957",
+    appId: "1:465527666957:web:dfccf4b0d59c8bfd479844",
+    measurementId: "G-0Y786RXT55"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
 </head>
 
 <body>
@@ -39,3 +64,4 @@
         </form>
     </div>
 </body>
+</html>
