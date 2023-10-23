@@ -1,90 +1,90 @@
-﻿body {
-    background-color: #026592;
+body {
+  background-color: #026592;
 }
 
 .ribbon {
-    position: sticky;
-    top: 0;
-    padding: 1.5rem;
-    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%), radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row-reverse;
+  position: sticky;
+  top: 0;
+  padding: 1.5rem;
+  background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%), radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row-reverse;
 }
 
 .fa-user {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .fa-bars {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 a:link {
-    color: black;
-    text-decoration-line: none;
+  color: black;
+  text-decoration-line: none;
 }
 
 a:visited {
-    color: black;
+  color: black;
 }
 
 a:hover {
-    cursor: pointer;
-    color: black;
+  cursor: pointer;
+  color: black;
 }
 
-a:active{
-    color: black;
+a:active {
+  color: black;
 }
 
-#coursework_link{
-    color: gold;
+#coursework_link {
+  color: gold;
 }
 
 .recent {
-    max-height: 120px;
-    background-color: #01567d;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    overflow-x: auto;
+  max-height: 120px;
+  background-color: #01567d;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  overflow-x: auto;
 }
 
-.recent::-webkit-scrollbar{
-    width: 0;
+.recent::-webkit-scrollbar {
+  width: 0;
 }
 
-.recent .rbox{
-    min-width: 110px;
-    height: 110px;
-    line-height: 110px;
-    text-align: center;
-    background-color: white;
-    margin-right: 2px;
-    cursor: pointer;
+.recent .rbox {
+  min-width: 110px;
+  height: 110px;
+  line-height: 110px;
+  text-align: center;
+  background-color: white;
+  margin-right: 2px;
+  cursor: pointer;
 }
 
 .new {
-    max-height: 120px;
-    background-color: #01567d;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    overflow-x: auto;
+  max-height: 120px;
+  background-color: #01567d;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  overflow-x: auto;
 }
 
 .new::-webkit-scrollbar {
-    width: 0;
+  width: 0;
 }
 
 .new .nbox {
-    min-width: 110px;
-    height: 110px;
-    line-height: 110px;
-    text-align: center;
-    background-color: white;
-    margin-right: 2px;
-    cursor: pointer;
+  min-width: 110px;
+  height: 110px;
+  line-height: 110px;
+  text-align: center;
+  background-color: white;
+  margin-right: 2px;
+  cursor: pointer;
 }
