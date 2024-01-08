@@ -1,35 +1,4 @@
-/*
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-  apiKey: "AIzaSyCujEWbrVsvuLKTAKEffSCsnDBBGHcR7qQ",
-  authDomain: "coursework-ba6b7.firebaseapp.com",
-  projectId: "coursework-ba6b7",
-  storageBucket: "coursework-ba6b7.appspot.com",
-  messagingSenderId: "465527666957",
-  appId: "1:465527666957:web:dfccf4b0d59c8bfd479844",
-  measurementId: "G-0Y786RXT55"
-};
-
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
-
-function signUp() {
-  firstName = document.getElementById("firstName").value;
-  surname = document.getElementById("surname").value;
-  email = document.getElementById("email").value;
-  password = document.getElementById("password").value;
-  confirmPassword = document.getElementById("confirmPassword").value;
-  fields = document.getElementsByClassName("form__input-group").value;
-}
-
+//validate email
 function validateEmail(email) {
   emailSyntax = /^[^@]+@\w+(\.\w+)+\w$/;
   if (emailSyntax.test(email) = true) {
@@ -38,11 +7,11 @@ function validateEmail(email) {
     return false
   }
 }
+
+
+//validate password
 function validatePassword(password) {
-  if (password != confirmPassword) {
-    console.log("Passwords don't match");
-    return false
-  } else if (password.length < 6) {
+  if (password.length < 6) {
     console.log("Password isn't more than 6 characters");
     return false
   } else {
@@ -50,16 +19,97 @@ function validatePassword(password) {
   }
 }
 
+
+//validate fields
 function validateRest(fields) {
   if (fields === nul) {
     console.log("Incomplete Fields");
     return false
-  } else if (fields.length = 0) {
+  } else if (fields.length <= 0) {
     console.log("Incomplete Fields");
     return false
   } else {
     return true
   }
 }
-*/
+
+function signUp() {
+  //get all inputs
+  let firstName = document.getElementById("firstName").value;
+  let surname = document.getElementById("surname").value;
+  let email = document.getElementById("email").value;
+  let password = document.getElementById("password").value;
+  let confirmPassword = document.getElementById("confirmPassword").value;
+
+  fetch('http://localhost:3000/signup', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ username, password }),
+  })
+  .then(response => response.json())
+  .then(data => {
+    alert(data.message);
+    // Redirect to another page after successful account creation
+    window.location.href = 'dashboard.html';
+  })
+  .catch(error => console.error('Error:', error));
+
+  if (validateEmail(email) == false) {
+    alert("Invalid email address");
+    return
+  }
+
+  if (validatePassword(password) == false) {
+    alert("Invalid password");
+    return
+  }
+
+  if (password != confirmPassword) {
+    alert("Passwords do not match");
+    return
+  }
+
+  if (validateFields(firstName) == false || validateFields(surname) == false || validateFields(email) == false || validateFields(password) == false || validateFields(confirmPassword) == false ) {
+    alert("Please fill in all fields")
+    return
+  }
+}
+
+
+//validate email
+function validateEmail(email) {
+  emailSyntax = /^[^@]+@\w+(\.\w+)+\w$/;
+  if (emailSyntax.test(email) = true) {
+    return true
+  } else {
+    return false
+  }
+}
+
+
+//validate password
+function validatePassword(password) {
+  if (password.length < 6) {
+    console.log("Password isn't more than 6 characters");
+    return false
+  } else {
+    return true
+  }
+}
+
+
+//validate fields
+function validateRest(fields) {
+  if (fields === nul) {
+    console.log("Incomplete Fields");
+    return false
+  } else if (fields.length <= 0) {
+    console.log("Incomplete Fields");
+    return false
+  } else {
+    return true
+  }
+}
 

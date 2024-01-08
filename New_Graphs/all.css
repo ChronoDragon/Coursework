@@ -1,0 +1,70 @@
+body {
+  background-color: 	#121212;
+}
+
+p{
+  color: white;
+}
+
+h1{
+  color: white;
+}
+
+h2{
+  color: white;
+}
+
+h3{
+  color: white;
+}
+
+h4{
+  color: white;
+}
+
+h5{
+  color: white;
+}
+
+ul{
+  color: white;
+}
+
+.ribbon {
+  position: sticky;
+  top: 0;
+  padding: 1.5rem;
+  background-color: #0c7f45;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+
+.fa-user {
+  cursor: pointer;
+  color: white;
+}
+
+.fa-bars {
+  cursor: pointer;
+  color: white;
+}
+
+a:link {
+  color: black;
+  text-decoration-line: none;
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover {
+  cursor: pointer;
+  color: black;
+}
+
+a:active {
+  color: black;
+}

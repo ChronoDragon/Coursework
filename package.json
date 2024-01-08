@@ -1,20 +1,31 @@
 {
   "name": "coursework",
   "version": "1.0.0",
-  "description": "",
   "main": "main.js",
   "scripts": {
-    "devStart": "nodemon server.js"
+    "devStart": "nodemon server.js",
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.2",
     "express": "^4.18.2",
-    "firebase": "^10.5.0"
+    "firebase": "^10.5.0",
+    "mysql": "^2.18.1"
   },
   "devDependencies": {
     "nodemon": "^3.0.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChronoDragon/Coursework.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ChronoDragon/Coursework/issues"
+  },
+  "homepage": "https://github.com/ChronoDragon/Coursework#readme",
+  "description": ""
 }
