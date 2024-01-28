@@ -31,7 +31,7 @@ ul{
 }
 
 .ribbon {
-  position: sticky;
+  position: flex;
   top: 0;
   padding: 1.5rem;
   background-color: #0c7f45;
