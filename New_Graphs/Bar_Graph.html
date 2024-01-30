@@ -19,7 +19,36 @@
     <i class="fa-solid fa-bars fa-2xl"></i>
     <!--The first and third of these lines are icons taken from fontawesome.com [INTERNET REQUIRED]-->
   </div>
+  <div id="input-container" class="blue-box">
+    <input type="text" id="xVariable" class="variable-input" placeholder="X Variable">
+    <input type="text" id="xUnit" class="unit-input" placeholder="X Unit">
+    <input type="text" id="yVariable" class="variable-input" placeholder="Y Variable">
+    <input type="text" id="yUnit" class="unit-input" placeholder="Y Unit">
+    <button id="confirm-btn" onclick="confirmInput()">Confirm</button>
+  </div>
 
+  <div id="content" class="blue-box">
+    <div id="graph-container">
+        <canvas id="bar-chart"></canvas>
+    </div>
+
+    <div id="table-container">
+        <table id="data-table">
+            <thead>
+                <tr>
+                    <th id="xHeader"></th>
+                    <th id="yHeader"></th>
+                </tr>
+            </thead>
+            <tbody id="data-table-body"></tbody>
+        </table>
+        <button id="add-value-btn" onclick="addValue()">Add Value</button>
+        <button id="generate-graph-btn" onclick="generateGraph()">Generate Graph</button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="Bar_Graph.js"></script>
 </body>
 
 </html>
