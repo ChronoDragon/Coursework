@@ -46,6 +46,10 @@ ul{
   color: white;
 }
 
+.main_nav{
+  cursor: pointer;
+}
+
 .fa-bars {
   cursor: pointer;
   color: white;

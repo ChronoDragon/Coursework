@@ -16,14 +16,10 @@ function confirmInput() {
         updateTableHeaders();
         enableAddValueButton();
         clearInputFields();
-
-        updateTable();
-        updateChart();
     } else {
         alert('Please fill in all input fields.');
     }
 }
-
 
 function updateTableHeaders() {
     const xHeader = document.getElementById('xHeader');
