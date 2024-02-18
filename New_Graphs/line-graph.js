@@ -1,12 +1,14 @@
 const dataSets = [];
 let setCount = 1;
 let graphModified = false;
+var xUnit
+var yUnit
 
 function confirmInput() {
-    const xVariable = document.getElementById('xVariable').value;
-    const xUnit = document.getElementById('xUnit').value;
-    const yVariable = document.getElementById('yVariable').value;
-    const yUnit = document.getElementById('yUnit').value;
+    xVariable = document.getElementById('xVariable').value;
+    xUnit = document.getElementById('xUnit').value;
+    yVariable = document.getElementById('yVariable').value;
+    yUnit = document.getElementById('yUnit').value;
 
     if (xVariable && xUnit && yVariable && yUnit) {
         if (!dataSets[setCount]) {
@@ -149,8 +151,8 @@ function updateChart() {
             }
         }
     });
-
-    document.getElementById('gradient').textContent = `Gradient: ${calculateGradient().toFixed(2)} ${document.getElementById('yUnit').value}/${document.getElementById('xUnit').value}`;
+  
+    document.getElementById('gradient').textContent = `Gradient: ${calculateGradient().toFixed(2)} ${yUnit}/${xUnit}`;
     gradient.style.color = "white";
     graphModified = true;
 }

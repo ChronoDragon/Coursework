@@ -39,6 +39,7 @@ ul{
   justify-content: space-between;
   align-items: center;
   flex-direction: row-reverse;
+  height: 30px;
 }
 
 .fa-user {
@@ -48,6 +49,7 @@ ul{
 
 .main_nav{
   cursor: pointer;
+  color: white;
 }
 
 .fa-bars {

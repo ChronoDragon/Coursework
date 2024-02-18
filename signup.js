@@ -1,38 +1,3 @@
-//validate email
-function validateEmail(email) {
-  emailSyntax = /^[^@]+@\w+(\.\w+)+\w$/;
-  if (emailSyntax.test(email) = true) {
-    return true
-  } else {
-    return false
-  }
-}
-
-
-//validate password
-function validatePassword(password) {
-  if (password.length < 6) {
-    console.log("Password isn't more than 6 characters");
-    return false
-  } else {
-    return true
-  }
-}
-
-
-//validate fields
-function validateRest(fields) {
-  if (fields === nul) {
-    console.log("Incomplete Fields");
-    return false
-  } else if (fields.length <= 0) {
-    console.log("Incomplete Fields");
-    return false
-  } else {
-    return true
-  }
-}
-
 function signUp() {
   //get all inputs
   let firstName = document.getElementById("firstName").value;
@@ -80,14 +45,13 @@ function signUp() {
 
 //validate email
 function validateEmail(email) {
-  emailSyntax = /^[^@]+@\w+(\.\w+)+\w$/;
+  emailSyntax = /^[\w\.-]+@[a-zA-Z\d\.-]+\.[a-zA-Z]{2,}$/ ;
   if (emailSyntax.test(email) = true) {
     return true
   } else {
     return false
   }
 }
-
 
 //validate password
 function validatePassword(password) {
@@ -112,4 +76,3 @@ function validateRest(fields) {
     return true
   }
 }
-
