@@ -152,7 +152,7 @@ function updateChart() {
         }
     });
   
-    document.getElementById('gradient').textContent = `Gradient: ${calculateGradient().toFixed(2)} ${yUnit}/${xUnit}`;
+    document.getElementById('gradient').textContent = `${calculateGradient().toFixed(2)} ${yUnit}/${xUnit}`;
     gradient.style.color = "white";
     graphModified = true;
 }
